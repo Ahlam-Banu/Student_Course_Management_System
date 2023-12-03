@@ -1,0 +1,31 @@
+/* styles for the Students component */
+.students-container {
+    padding: 20px;
+  }
+  
+  .students-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Styles for student list items */
+  .student-item {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Styles for student names */
+  .student-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Styles for student IDs */
+  .student-id {
+    color: #777;
+    font-size: 14px;
+  }
+  

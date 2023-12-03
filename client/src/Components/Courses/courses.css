@@ -1,0 +1,31 @@
+/* styles for the Courses component */
+.courses-container {
+    padding: 20px;
+  }
+  
+  .courses-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Styles for course list items */
+  .course-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Styles for course names */
+  .course-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Styles for course codes */
+  .course-code {
+    color: #555;
+    font-size: 14px;
+  }
+  
