@@ -16,7 +16,7 @@ import ahlam.java.server.course.entity.Courses;
 import ahlam.java.server.course.repo.CourseService;
 
 @RestController
-@RequestMapping("/api/courses")
+@RequestMapping("/courses")
 public class CourseController {
 
     @Autowired

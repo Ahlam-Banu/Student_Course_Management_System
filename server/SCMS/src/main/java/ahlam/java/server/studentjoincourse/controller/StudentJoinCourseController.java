@@ -18,7 +18,7 @@ import ahlam.java.server.studentjoincourse.entity.StudentJoinCourse;
 import ahlam.java.server.studentjoincourse.repo.SJCservice;
 
 @RestController
-@RequestMapping("/api/enrollments")
+@RequestMapping("/enrollments")
 public class StudentJoinCourseController {
 
     @Autowired
