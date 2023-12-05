@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;server/SCMS/src/main/java/ahlam/java/server/jwt/JwtTokenProvider&apos; to &apos;JwtTokenProvider.java&apos;" description="Rename resource &apos;JwtTokenProvider&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="SCMS/src/main/java/ahlam/java/server/jwt/JwtTokenProvider" name="JwtTokenProvider.java" stamp="1701729431249" updateReferences="true"/>
+</session>
