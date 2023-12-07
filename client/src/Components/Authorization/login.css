@@ -1,37 +1,119 @@
-/* Sample CSS for login page */
 
-/* Styles for the login form */
-.form-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  /* Styles for input fields */
-  .input-field {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  /* Style the login button */
-  .login-btn {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .login-btn:hover {
-    background-color: #45a049;
-  }
-  
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  background: #424769;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.screen {		
+	position: relative;
+  height: 450px;
+	width: 500px;	
+  background: #424769; /* Change this to your preferred background color */
+  border-radius: 12px; /* Adjust the border radius */
+  overflow: hidden;
+	box-shadow: 0px 0px 24px black;
+}
+
+.login {
+	width: 60%;
+  margin: 0 auto;
+  padding: 50px 0; /* Adjust padding as needed */
+  text-align: center;
+}
+
+.login__field {
+	margin-bottom: 20px;	
+}
+
+.login__input {
+  border: none;
+  border-bottom: 2px solid #2d3250;
+  background: transparent;
+  padding: 10px;
+  font-weight: 700;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.screen__content {
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.screen__background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: grey;
+}
+
+.login__submit {
+  background: #fdd184;
+  color: #2d3250;
+  font-size: 14px;
+  padding: 19px 20px;
+  border-radius: 26px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__submit:focus,
+.login__submit:active,
+.login__submit:hover {
+	border-color: #6A679E;
+	outline: none;
+}
+
+.login__submit:hover {
+  background-color: #6A679E;
+  color: #fff;
+}
+
+.button__icon {
+	font-size: 24px;
+	color: #7875B5;
+}
+
+.button__text {
+  background-color: transparent;
+}
+

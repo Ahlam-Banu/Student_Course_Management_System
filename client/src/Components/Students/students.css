@@ -1,31 +1,41 @@
-/* styles for the Students component */
+.h1 {
+  text-align: center;
+}
+
 .students-container {
-    padding: 20px;
-  }
-  
-  .students-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  /* Styles for student list items */
-  .student-item {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  /* Styles for student names */
-  .student-name {
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  /* Styles for student IDs */
-  .student-id {
-    color: #777;
-    font-size: 14px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start; /* Center the cards */
+  padding: 20px; /* Add padding around the container */
+}
+
+.student-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 250px; /* Set a minimum width for each card */
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px; /* Add margin at the bottom for spacing */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.student-image-container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.student-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+button {
+  margin-top: 10px;
+  cursor: pointer;
+}
