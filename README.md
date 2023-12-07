@@ -110,5 +110,3 @@ This project is the culmination of the Java Server Programming Course, focusing 
 #### Courses
 
 #### Login 
-
-This revised presentation should provide a clearer overview of your Student Management System project. Feel free to adjust any specific details or sections further as needed!
