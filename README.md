@@ -86,19 +86,19 @@ This project is the culmination of the Java Server Programming Course, focusing 
 ## Usage
 
 1. **Users API:**
-   - Endpoint: `/api/users`
+   - Endpoint: `/users`
    - Methods: GET, POST, PUT, DELETE
 
 2. **Students API:**
-   - Endpoint: `/api/students`
+   - Endpoint: `/students`
    - Methods: GET (No authentication), POST, PUT, DELETE (Requires authentication)
 
 3. **Courses API:**
-   - Endpoint: `/api/courses`
+   - Endpoint: `/courses`
    - Methods: GET, POST, PUT, DELETE
 
 4. **Authentication:**
-   - Endpoint: `/login` or `/users/login`
+   - Endpoint: `/login`
    - Method: POST
    - Provide username and password in the request body to obtain a JWT token.
 
