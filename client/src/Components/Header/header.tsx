@@ -1,4 +1,5 @@
 // header.tsx
+import { text } from 'stream/consumers';
 import './header.css';
 
 const Header = () => {

@@ -1,40 +1,56 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './login.css';
+import { loginUser } from '../../API/api';
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    // Logic to handle login with username and password
-    // This could involve making an API call to authenticate the user
-    // For example:
-    // authService.login(username, password);
+  const handleLogin = async () => {
+    const data = [username,password]
+    await loginUser(data)
+    setUsername('')
+    setPassword('')
   };
 
   return (
-    <div className="form-container">
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <input
-          type="text"
-          className="input-field"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          className="input-field"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit" className="login-btn">
-          Login
-        </button>
-      </form>
+    <div className="container">
+      <div className="screen">
+        <div className="screen__content">
+          <form className="login">
+            <div className="login__field">
+              <label>
+                Username
+                <input
+                  type="text"
+                  className="login__input"
+                  placeholder="username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </label>
+            </div>
+            <div className="login__field">
+              <label>
+                Password
+                <input
+                  type="password"
+                  className="login__input"
+                  placeholder="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </label>
+            </div>
+            <button type="button" onClick={handleLogin} className="button login__submit">
+              <span className="button__text">Log In</span>
+              <i className="button__icon fas fa-chevron-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
