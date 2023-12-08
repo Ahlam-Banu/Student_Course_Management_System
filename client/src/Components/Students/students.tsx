@@ -2,19 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { fetchStudents, deleteStudent } from '../../API/api';
 import './students.css';
 
-const StudentsList: React.FC = () => {
+const Students: React.FC = () => {
   const [students, setStudents] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   useEffect(() => {
-    // Fetch all students when the component mounts
-    fetchAllStudents();
+    fetchAllStudents();     // Fetch all students when the component mounts
   }, []);
 
   const fetchAllStudents = async () => {
     try {
       const data = await fetchStudents();
-      //console.log('Fetched Students:', data); // Log the fetched data
       setStudents(data);
     } catch (error) {
       console.error('Error fetching students:', error);
@@ -24,8 +22,7 @@ const StudentsList: React.FC = () => {
   const handleDeleteStudent = async (id: number) => {
     try {
       await deleteStudent(id);
-      // After successful deletion, fetch the updated list of students
-      await fetchAllStudents();
+      await fetchAllStudents();       // After successful deletion, fetch the updated list of students
     } catch (error) {
       console.error('Error deleting student:', error);
     }
@@ -37,7 +34,7 @@ const StudentsList: React.FC = () => {
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center' }}>Students List</h1>
+      <h1 style={{ textAlign: 'center' }}>Students</h1>
       <div style={{ textAlign: 'center', margin: '20px 0' }}>
         <input
           type="text"
@@ -58,16 +55,16 @@ const StudentsList: React.FC = () => {
               />
             </div>
             <p>
-              <strong>Id:</strong> {student.id}
+              <strong>Id:</strong> {student.studentID}
             </p>
             <p>
-              <strong>Name:</strong> {student.firstname} {student.lastname}
+              <strong>Name:</strong> {student.firstName} {student.lastName}
             </p>
             <p>
               <strong>Email:</strong> {student.email}
             </p>
 
-            <button onClick={() => handleDeleteStudent(student.id)}>Delete</button>
+            <button onClick={() => handleDeleteStudent(student.studentID)}>Delete</button>
           </div>
         ))}
       </div>
@@ -75,4 +72,4 @@ const StudentsList: React.FC = () => {
   );
 };
 
-export default StudentsList;
+export default Students;
