@@ -13,6 +13,7 @@ const Login: React.FC = () => {
     await loginUser(data)
     setUsername('')
     setPassword('')
+    navigate("/students")
   };
 
   return (

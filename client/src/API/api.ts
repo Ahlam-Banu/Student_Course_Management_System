@@ -1,4 +1,4 @@
-const MAIN_URL = 'http://localhost:8080';
+//const MAIN_URL = 'http://localhost:8080';
 const BASE_URL = 'http://localhost:8080'
 const LOCAL_URL = 'http://localhost:3000'
 
@@ -128,9 +128,9 @@ export const deleteCourse = async (id: number) => {
 };
 
 // Enrollments API
-export const fetchEnrollments = async (studentId?: number, courseId?: number) => {
-  const url = studentId && courseId
-    ? `${BASE_URL}/enrollments?studentId=${studentId}&courseId=${courseId}`
+export const fetchEnrollments = async (studentID?: number, courseID?: number) => {
+  const url = studentID && courseID
+    ? `${BASE_URL}/enrollments?studentID=${studentID}&courseID=${courseID}`
     : `${BASE_URL}/enrollments`;
 
   return fetchData(url);
@@ -149,8 +149,8 @@ export const addEnrollment = async (enrollmentData: any) => {
   return fetchData(url, options);
 };
 
-export const deleteEnrollment = async (studentId: number, courseId: number) => {
-  const url = `${BASE_URL}/enrollments?studentId=${studentId}&courseId=${courseId}`;
+export const deleteEnrollment = async (studentID: number, courseID: number) => {
+  const url = `${BASE_URL}/enrollments?studentID=${studentID}&courseID=${courseID}`;
   const options: RequestInit = {
     method: 'DELETE',
   };
@@ -182,7 +182,7 @@ export const logoutUser = async () =>{
 }
 
 export const loginUser = async (userData: any) => {
-  const url = `${LOCAL_URL}/auth/login`;
+  const url = `${BASE_URL}/auth/login`;
 
   const username = userData[0]
   const password = userData[1]
@@ -197,16 +197,16 @@ export const loginUser = async (userData: any) => {
         password: password,
       }).toString(),
     });
+    console.log(response.body)
     if (!response.url.endsWith('error')) {
       console.log('Login successful');
       const token = response.headers.get('Authorization');
-
+      console.log(token)
       // Save the token to local storage
       if (token !== null) {
       localStorage.setItem('token', token);
       }
-      else{console.log("token already exists")}
-      //navigate('/students');
+      else{console.log("token not found")}
       return "ok"
       // Do something after successful login
     } else {

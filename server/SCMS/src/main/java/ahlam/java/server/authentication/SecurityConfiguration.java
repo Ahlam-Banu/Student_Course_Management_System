@@ -39,6 +39,7 @@ public class SecurityConfiguration {
                                 .requestMatchers("/users/register").permitAll()
                                 .requestMatchers("/students").permitAll()
                                 .requestMatchers("/courses").permitAll()
+                                .requestMatchers("/auth/login").permitAll()
                                 .requestMatchers(HttpMethod.PUT, "/students").permitAll()
                                 .anyRequest().authenticated()
                 )

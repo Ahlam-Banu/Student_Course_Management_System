@@ -25,7 +25,6 @@ public class User {
     
     public Collection<? extends GrantedAuthority> getAuthorities() {
         // Return the list of authorities/roles for the user
-        // You might need to adjust this based on your user model
         return null;
     }
     

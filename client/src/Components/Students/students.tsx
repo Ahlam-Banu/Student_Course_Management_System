@@ -29,7 +29,7 @@ const Students: React.FC = () => {
   };
 
   const filteredStudents = students.filter((student) =>
-    student.id.toString().includes(searchTerm)
+    student.studentID.toString().includes(searchTerm)
   );
 
   return (
@@ -46,7 +46,7 @@ const Students: React.FC = () => {
       </div>
       <div className="students-container">
         {filteredStudents.map((student) => (
-          <div key={student.id} className="student-card">
+          <div key={student.studentID} className="student-card">
             <div className="student-image-container">
               <img
                 src={student.imageUrl || 'https://via.placeholder.com/150'}

@@ -97,7 +97,7 @@ const Courses: React.FC = () => {
         <tbody>
           {enrolledStudents.map((student) => (
             <tr key={student.id}>
-              <td>{student.id}</td>
+              <td>{student.studentID}</td>
               <td>{student.firstname}</td>
               <td>{student.lastname}</td>
               <td>{student.email}</td>
