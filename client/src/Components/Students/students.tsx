@@ -19,9 +19,9 @@ const Students: React.FC = () => {
     }
   };
 
-  const handleDeleteStudent = async (id: number) => {
+  const handleDeleteStudent = async (studentID: number) => {
     try {
-      await deleteStudent(id);
+      await deleteStudent(studentID);
       await fetchAllStudents();       // After successful deletion, fetch the updated list of students
     } catch (error) {
       console.error('Error deleting student:', error);
@@ -34,7 +34,7 @@ const Students: React.FC = () => {
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center' }}>Students</h1>
+      <h1 style={{ textAlign: 'center', fontFamily:'serif' }}>STUDENTS</h1>
       <div style={{ textAlign: 'center', margin: '20px 0' }}>
         <input
           type="text"
@@ -49,7 +49,7 @@ const Students: React.FC = () => {
           <div key={student.studentID} className="student-card">
             <div className="student-image-container">
               <img
-                src={student.imageUrl || 'https://via.placeholder.com/150'}
+                src={student.imageUrl || 'https://picsum.photos/id/447/1280/853.jpg'}
                 alt={`${student.firstName} ${student.lastName}`}
                 className="student-image"
               />
@@ -58,13 +58,13 @@ const Students: React.FC = () => {
               <strong>Id:</strong> {student.studentID}
             </p>
             <p>
-              <strong>Name:</strong> {student.firstName} {student.lastName}
+              <strong>Name:</strong> {student.firstname} {student.lastname}
             </p>
             <p>
               <strong>Email:</strong> {student.email}
             </p>
 
-            <button onClick={() => handleDeleteStudent(student.studentID)}>Delete</button>
+            <button className="delete-button" onClick={() => handleDeleteStudent(student.studentID)}>Delete</button>
           </div>
         ))}
       </div>

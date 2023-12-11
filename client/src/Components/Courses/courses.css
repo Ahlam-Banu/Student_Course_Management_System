@@ -23,11 +23,12 @@
   }
   .h1 {
     text-align: center;
+    font-family: serif;
   }
   /* Styles for course list items */
   .course-item {
-    background-color: grey;
-    border: 1px solid #ccc;
+    background-color: black;
+    border: none;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -35,8 +36,7 @@
   
   /* Styles for course names */
   .course-name {
-    font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
   }
   
   /* Styles for course codes */
@@ -47,13 +47,15 @@
 
   /* Add these styles to your courses.css file */
 .course-card {
-  border: 1px solid #ccc;
+  border: none;
+  border-radius: 10%;
   padding: 10px;
   width: 250px; /* Set a minimum width for each card */
   box-sizing: border-box;
   text-align: center;
   margin-bottom: 20px; /* Add margin at the bottom for spacing */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #30405Bff;
 }
 
 .course-card p {
@@ -70,7 +72,8 @@
 }
 
 .course-card button:hover {
-  background-color: #0056b3;
+  background-color: white;
+  color: black;
 }
 
 /* Modal styles (you may adjust these to match your design) */
@@ -129,31 +132,9 @@ th, td {
   cursor: pointer;
 }
 
-button {
-  margin-top: 10px;
+.more-button {
+  margin-top: 5px;
   cursor: pointer;
-  
-  display: inline-block;
-  outline: 0;
-  cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
-  background: #968c61;
-  border: 1px solid #4e954f;
-  font-size: 13px;
-  height: 31px;
-  padding: 0 11px;
-  text-align: center;
-  width: 100%;
-  min-width: 200px;
-  font-weight: 500;
-  color: #ececec;
-  :hover{
-      background: #2b2a3f;
-      border-color: #F2C200;
-      box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
-  }
-  
 }
 
 

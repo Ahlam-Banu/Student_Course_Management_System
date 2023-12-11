@@ -46,7 +46,7 @@ const Login: React.FC = () => {
               </label>
             </div>
             <button type="button" onClick={handleLogin} className="button login__submit">
-              <span className="button__text">Log In</span>
+              <span className="button__text">LOG IN</span>
               <i className="button__icon fas fa-chevron-right"></i>
             </button>
           </form>

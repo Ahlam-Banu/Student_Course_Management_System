@@ -1,8 +1,8 @@
 /* header.css */
 
 .header {
-    background-color: #2d3250;
-    color: white;
+    background-color: white;
+    color: #16578Eff;
     padding: 10px;
   }
   
@@ -28,8 +28,9 @@
   }
   
   .nav-links li a {
-    color: #fdd184;
+    color: #16578Eff;
     text-decoration: none;
+    font-weight: bold; /* Make the text bold */
   }
   
   .nav-links li a:hover {

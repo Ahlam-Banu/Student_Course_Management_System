@@ -11,13 +11,14 @@
 }
 
 .student-card {
-  border: 1px solid #ccc;
   padding: 10px;
   width: 250px; /* Set a minimum width for each card */
   box-sizing: border-box;
   text-align: center;
   margin-bottom: 20px; /* Add margin at the bottom for spacing */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* change the roundness */
+  background-color: #16578Eff;
 }
 
 .student-image-container {
@@ -35,7 +36,20 @@
   border-radius: 50%;
 }
 
-button {
-  margin-top: 10px;
+.delete-button {
+  background-color: white; /* Change button background color */
+  color: #ff6347; /* Text color */
+  margin-top: 10px; /* Increase the margin at the bottom for more space */
+  border: none;
+  width: auto;
+  padding: 8px 16px;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+  color: white;
+
 }

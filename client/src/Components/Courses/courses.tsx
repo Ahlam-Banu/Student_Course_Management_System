@@ -20,7 +20,7 @@ const Courses: React.FC = () => {
 
       // If searchId is empty, show all courses; otherwise, filter by course ID
       const filteredCourses = searchId
-        ? data.filter((course: { id: { toString: () => string | string[]; }; }) => course.id.toString().includes(searchId))
+        ? data.filter((course: { courseID: { toString: () => string | string[]; }; }) => course.courseID.toString().includes(searchId))
         : data;
 
       setCourses(filteredCourses);
@@ -34,7 +34,7 @@ const Courses: React.FC = () => {
       const enrolledStudentsData = await fetchEnrollments(id);
       //console.log(`Enrolled Students in Course ${id}:`, enrolledStudentsData);
 
-      var data = enrolledStudentsData.filter((entry: { course: { id: number; }; }) => entry.course.id === id).map((entry: { student: any; }) => entry.student);
+      var data = enrolledStudentsData.filter((entry: { course: { courseID: number; }; }) => entry.course.courseID === id).map((entry: { student: any; }) => entry.student);
       console.log(`Enrolled Students in Course ${id}:`, data);
       
       setEnrolledStudents(data);
@@ -49,8 +49,8 @@ const Courses: React.FC = () => {
   };
 
   return (
-    <div className="courses-container">
-      <h1 className="h1">Courses</h1>
+    <div>
+      <h1 className="h1">Courses List</h1>
       <div className="search-bar">
         <input
           type="text"
@@ -59,20 +59,20 @@ const Courses: React.FC = () => {
           onChange={(e) => setSearchId(e.target.value)}
         />
       </div>
-      <div className="courses-list">
+      <div className="courses-container">
         {courses.map((course) => (
-          <div key={course.courseID} className="course-item">
-            <p className="course-code"> 
-              <strong>Id </strong> {course.courseID}
+          <div key={course.courseID} className="course-card">
+            <p>
+              <strong>Id:</strong> {course.courseID}
             </p>
-            <p className="course-name">
+            <p>
               <strong>Name:</strong> {course.name}
             </p>
             <p>
               <strong>Teacher:</strong> {course.teacherName}
             </p>
-            <button onClick={() => handleShowEnrolledStudents(course.courseID)}>
-              Show Students
+            <button className="more-button" onClick={() => handleShowEnrolledStudents(course.courseID)}>
+              More
             </button>
           </div>
         ))}
@@ -84,7 +84,7 @@ const Courses: React.FC = () => {
       <span className="close" onClick={handleCloseModal}>
         &times;
       </span>
-      <h3>Students</h3>
+      <h3>Enrolled Students</h3>
       <table>
         <thead>
           <tr>
@@ -96,7 +96,7 @@ const Courses: React.FC = () => {
         </thead>
         <tbody>
           {enrolledStudents.map((student) => (
-            <tr key={student.id}>
+            <tr key={student.studentID}>
               <td>{student.studentID}</td>
               <td>{student.firstname}</td>
               <td>{student.lastname}</td>
