@@ -106,7 +106,10 @@ This project is the culmination of the Java Server Programming Course, focusing 
 
 ### Front-End Views
 #### Students
+![image](https://github.com/Ahlam-Banu/Student_Course_Management_System/assets/102663986/31f7daba-1661-4c1c-8723-5a3790a42837)
 
 #### Courses
+![image](https://github.com/Ahlam-Banu/Student_Course_Management_System/assets/102663986/3438b218-9588-41f0-a801-2e5f740a87d0)
 
 #### Login 
+![image](https://github.com/Ahlam-Banu/Student_Course_Management_System/assets/102663986/1219ec4e-47b6-4777-b047-965dd8a27820)
